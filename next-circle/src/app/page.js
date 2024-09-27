@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [shapeStyle, setShapeStyle] = useState({});
@@ -48,12 +49,14 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen relative overflow-hidden">
-      <div
+      <motion.div
         style={shapeStyle}
-        className={`cursor-pointer transition-all ease-in-out duration-700 transform hover:scale-110 ${
-          fadeIn ? "opacity-100" : "opacity-0"
-        } ${shapeClasses}`}
+        className={`cursor-pointer transition-all ease-in-out duration-700 transform hover:scale-110 ${shapeClasses}`}
         onClick={handleShapeClick}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: fadeIn ? 1 : 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.7 }}
       />
     </div>
   );
