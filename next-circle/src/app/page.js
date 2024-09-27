@@ -42,7 +42,7 @@ export default function Home() {
     const shapes = [
       "rounded-full w-32 h-32", // Circle
       "rounded-none w-32 h-32", // Square
-      "w-32 h-16", // Rectangle
+      "w-40 h-20", // Rectangle
     ];
     return shapes[Math.floor(Math.random() * shapes.length)];
   }
