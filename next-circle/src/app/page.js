@@ -40,9 +40,9 @@ export default function Home() {
 
   function getRandomShapeClasses() {
     const shapes = [
-      "rounded-full w-32 h-32", // Circle
-      "rounded-none w-32 h-32", // Square
-      "w-40 h-20", // Rectangle
+      "rounded-full w-20 h-20 md:w-32 md:h-32", // Circle
+      "rounded-none w-20 h-20 md:w-32 md:h-32", // Square
+      "w-20 h-10 md:w-40 md:h-20", // Rectangle
     ];
     return shapes[Math.floor(Math.random() * shapes.length)];
   }
